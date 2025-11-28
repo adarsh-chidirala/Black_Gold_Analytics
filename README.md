@@ -256,7 +256,3 @@ Anyone can re-run the whole analysis with NO manual steps.
 
 ---
 
-## 8. Contact / Maintainer
-**Author:** Adarsh  
-**Purpose:** Academic research-level econometric analysis of oil markets.
-
