@@ -136,4 +136,3 @@ base_prod[['Country','Year','Production_Mb','Price_Brent','ln_Production','ln_Pr
 
 print("Plots saved to:", PLOTS_DIR)
 print("Results saved to:", OUT_DIR)
-print("Script finished.")
