@@ -177,12 +177,12 @@ outputs/plots/
 ## 4. Key Outputs (Images Embedded)
 
 ### **Global Production vs Brent Price (Timeseries)**
-![Global Prod Price Timeseries](outputs/plots/global_prod_price_timeseries.png)
+![Global Prod Price Timeseries](results/plots/global_prod_price_timeseries.png)
 
 ---
 
 ### **Scatter: ln(Production) vs ln(Price)**
-![Scatter lnprod lnprice](outputs/plots/scatter_lnprod_lnprice_with_fit.png)
+![Scatter lnprod lnprice](results/plots/scatter_lnprod_lnprice.png)
 
 ---
 
