@@ -1,41 +1,101 @@
-**Pseudocode Plan:**
-1. Title and project description.
-2. Prerequisites and installation instructions.
-3. Usage instructions (how to run the script).
-4. Output description.
-5. Example command.
-6. License section.
+# 🛢️ Black Gold Analytics  
+### *Global Oil Production, Consumption, Prices & Elasticity Analysis (2000–2024)*  
+
+This project builds a fully reproducible data pipeline for constructing, validating, and analyzing a global oil panel dataset from multiple raw sources.  
+It includes:
+
+- Clean ETL pipeline  
+- Full data validation  
+- Econometric models  
+- Price elasticity estimation  
+- Robustness checks & diagnostics  
+- Visualizations and interpretations  
 
 ---
 
-```markdown
-# Oil Market EDA
+## 📁 Project Structure
 
-This project provides exploratory data analysis (EDA) for global oil production and consumption trends using Python. It generates visualizations from a cleaned dataset.
-
-## Prerequisites
-
-- Python 3.8+
-- pandas
-- matplotlib
-- seaborn
-
-Install dependencies with:
-```bash
-pip install pandas matplotlib seaborn
+```
+BACK GOLD ANALYTICS/
+│
+├── data_raw/
+├── data_clean/
+│    └── master_oil_panel.csv
+│
+├── outputs/
+│    ├── plots/
+│    │     ├── global_prod_price_timeseries.png
+│    │     └── scatter_lnprod_lnprice_with_fit.png
+│    └── robustness/
+│          └── robustness.txt
+│
+├── results/
+│    ├── plots/
+│    ├── diagnostics.txt
+│    ├── ols_production_price.txt
+│    └── ols_consumption_price.txt
+│
+├── scripts/
+│
+├── notebooks/
+│
+├── requirements.txt
+└── README.md
 ```
 
-## Usage
+---
 
-1. Place your cleaned dataset at `data_clean/master_oil_panel.csv`.
-2. Run the EDA script:
-   ```bash
-   python generate_eda.py
-   ```
-3. Output charts will be saved in the `outputs/` directory.
+## 🚀 How to Run
 
-## Output
+### 1️⃣ Install dependencies
 
-- Visualizations of global oil production and consumption trends (1980-2023).
+```bash
+pip install -r requirements.txt
+```
 
-#
+### 2️⃣ Build cleaned dataset
+
+```bash
+python3 scripts/build_master.py
+```
+
+### 3️⃣ Validate dataset
+
+```bash
+python3 scripts/validate_clean_data.py
+```
+
+### 4️⃣ Estimate price elasticity
+
+```bash
+python3 scripts/price_elasticity_pipeline.py
+```
+
+### 5️⃣ Robustness checks
+
+```bash
+python3 scripts/robustness.py
+```
+
+---
+
+## 📊 Key Plots
+
+### Global Production vs Price  
+![Global Production vs Price](outputs/plots/global_prod_price_timeseries.png)
+
+### ln(Production) vs ln(Price)  
+![Scatter](outputs/plots/scatter_lnprod_lnprice_with_fit.png)
+
+---
+
+## 📈 Regression Output Summary
+
+- Production elasticity ≈ **0.005–0.02**
+- Consumption elasticity ≈ **0.04–0.05**
+
+---
+
+## 🧪 Robustness Summary
+
+See: `outputs/robustness/robustness.txt`
